@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="gh" fetch="https://github.com/xiaomi-blossom-dev" />
+  <remote name="ab" fetch="https://github.com/Alromine95" />
+
+  <project name="device_xiaomi_blossom_14" path="device/xiaomi/blossom" remote="ab" revision="staging/lineage-21" />
+  
+  <project name="proprietary_vendor_xiaomi_blossom" path="vendor/xiaomi/blossom" remote="gh" revision="fourteen" /> 
+  
+  <project path="device/xiaomi/blossom-kernel" name="device_xiaomi_blossom-kernel" remote="gh" revision="fourteen" >
+    <linkfile src="headers" dest="kernel/xiaomi/blossom" />
+  </project>  
+
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="gh" revision="fourteen" />
+
+  <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="gh" revision="fourteen" /> 
