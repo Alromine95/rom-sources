@@ -15,3 +15,5 @@
   <project path="hardware/mediatek" name="android_hardware_mediatek" remote="gh" revision="fourteen" />
 
   <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="gh" revision="fourteen" /> 
+
+  </manifest>
