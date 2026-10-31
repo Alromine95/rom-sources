@@ -16,4 +16,9 @@
 
   <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="gh" revision="fourteen" /> 
 
+  <remove-project name="ArrowOS/android_device_mediatek_sepolicy_vndr" />
+
+  <remove-project name="ArrowOS/android_hardware_mediatek" />
+
+
   </manifest>
