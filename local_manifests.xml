@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="gh" fetch="https://github.com/xiaomi-blossom-dev" />
-  <remote name="ab" fetch="https://github.com/Alromine95" />
+	<remote name="zy" fetch="https://github.com/zyexro" />
+	<remote name="mindthegapps" fetch="https://gitlab.com/MindTheGapps" />
+	<remote name="gh" fetch="https://github.com" />
 
-  <project name="device_xiaomi_blossom_14" path="device/xiaomi/blossom" remote="ab" revision="staging/lineage-21" />
+  <!-- device tree -->
+  <project path="device/xiaomi/blossom" name="android_device_xiaomi_blossom" remote="zy" revision="yaoyoro" />
+
+  <!-- SELinux policies -->
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="zy" revision="yaoyaro-14.1" />
+
+  <!-- hardware supports -->
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="zy" revision="yaoyoro-14.1" />
+
+  <!-- Hardware Interfaces -->
+  <remove-project path="hardware/interfaces"/>
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="zy" revision="lineage-21.0" />
   
-  <project name="proprietary_vendor_xiaomi_blossom" path="vendor/xiaomi/blossom" remote="gh" revision="fourteen" /> 
-  
-  <project path="device/xiaomi/blossom-kernel" name="device_xiaomi_blossom-kernel" remote="gh" revision="fourteen" >
+  <!-- kernel tree -->
+  <project path="device/xiaomi/blossom-kernel" name="android_device_xiaomi_blossom-kernel" remote="zy" revision="main" >
     <linkfile src="headers" dest="kernel/xiaomi/blossom" />
-  </project>  
+  </project>
 
-  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="gh" revision="fourteen" />
-
-  <project name="android_device_mediatek_sepolicy_vndr" path="device/mediatek/sepolicy_vndr" remote="gh" revision="fourteen" /> 
-
-  <remove-project name="ArrowOS/android_device_mediatek_sepolicy_vndr" />
-
-  <remove-project name="ArrowOS/android_hardware_mediatek" />
-
+  <!-- vendor tree -->
+  <project path="vendor/xiaomi/blossom" name="proprietary_vendor_xiaomi_blossom" remote="zy" revision="yaoyoro" />
 
   </manifest>
